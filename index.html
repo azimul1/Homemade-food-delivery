@@ -1,12 +1,15 @@
 
- home made project 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeMade Connect | Authentic Food Delivery Platform</title>
+    <title>HomeMade food | Authentic Food Delivery Platform</title>
     <meta name="description" content="A digital marketplace connecting customers with home chefs for fresh, homemade, and affordable meals.">
+
+<link href ="Admin.html" real = "admin.html"> 
+
+
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
@@ -527,10 +530,18 @@
                 <a href="#services">Services</a>
                 <a href="#features">Features</a>
                 <a href="#audience">Target Audience</a>
+                <a href="login.html">Login</a>
+                <a href="Admin.html">Admin</a>
+               <a href="Menu.html">view menu</a> 
                 <a href="#contact" class="btn btn-primary" style="padding: 8px 20px; color: rgb(107, 62, 62);">Get Started</a>
+              
+                
             </nav>
+        
         </div>
     </header>
+
+
 
     <!-- Main Content -->
     <main>
@@ -638,15 +649,21 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Platform Features</h2>
-                    <p>A comprehensive ecosystem for Customers, Chefs, and Administrators.</p>
+                    <p>A comprehensive ecosystem for Customers,  And  Chefs.</p>
                 </div>
 
                 <div class="tabs-container">
                     <div class="tabs-header">
                         <button class="tab-btn active" onclick="openTab(event, 'customer')">For Customers</button>
                         <button class="tab-btn" onclick="openTab(event, 'chef')">For Chefs</button>
+                       <!---- 
                         <button class="tab-btn" onclick="openTab(event, 'admin')">Admin Panel</button>
+                    -->
                     </div>
+
+
+
+
 
                     <!-- Customer Tab -->
                     <div id="customer" class="tab-content active">
@@ -814,17 +831,21 @@ input, select, textarea {
 
 <body>
 
-<div class="container">
+
+
+<!---->
+<div class="container ">
 
   <!-- ================= AUTH ================= -->
   <div class="auth-box">
     <h2>User Login / Registration</h2>
     <input type="text" placeholder="Email">
+    <input type="int" placeholder="Phone Number">
     <input type="password" placeholder="Password">
     <button>Login</button>
   </div>
 
-  <!-- ================= MENU ================= -->
+  <!-- ================= MENU ================= --
   <h2>Menu</h2>
   <div class="menu-grid">
     <div class="menu-item">
@@ -844,9 +865,94 @@ input, select, textarea {
         <button>Add to Cart</button>
       </div>
     </div>
+
+    <div class="menu-item">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2i44aRqGG0iDm8PIp5-PD3eXR_5iAhcjWCg&s" alt="">
+      <div class="content">
+        <h3>kacchi</h3>
+        <p > mutton Kacchi</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+ <div class="menu-item">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReSt9qah2rpwrTUuLLGotFUv89T1dQGsKOOA&s" alt="">
+      <div class="content">
+        <h3>Goru</h3>
+        <p>Bhuna Goru</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+
+ <div class="menu-item">
+      <img src="https://i.ytimg.com/vi/AfpJFr0kbmk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLArjD0GQE__VIUnipRm8LbkSPP62g " alt="">
+      <div class="content">
+        <h3>Murgi</h3>
+        <p>Bhuna Murgi mangsho</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNLvRoMD-ztoTL3BQoHX2ZX72mL8wbXQ40-Q&s " alt="">
+      <div class="content">
+        <h3>khichuri</h3>
+        <p>Bhuna Khichuri</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+
+
+    <div class="menu-item">
+      <img src="https://kitchenofdebjani.com/wp-content/uploads/2022/08/Gurer-Narkel-Naru-Recipe-Debjanir-Rannaghar.jpg" alt="">
+      <div class="content">
+        <h3>Naru</h3>
+        <p>Narkel Naru</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkzKkCZXeHBhtKdb8XZM-n9in9ZZrQ_8gMg&s" alt="">
+      <div class="content">
+        <h3>Naru</h3>
+        <p>Tiler Naru</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src=" https://img.drz.lazcdn.com/g/kf/S3e11ba4caddd41bd92834c4d2b1beb20P.jpg_200x200q80.avif" alt="">
+      <div class="content">
+        <h3>papur</h3>
+        <p>melar papur</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src=" https://thebellyrulesthemind.net/wp-content/uploads/2022/10/Instant-Pot-Ghee-04-pin.jpg " alt="">
+      <div class="content">
+        <h3>Ghee</h3>
+        <p>Pure Ghee</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src=" https://img.drz.lazcdn.com/static/bd/p/e6dc9b24c93d8e246a691e97151ac631.jpg_720x720q80.jpg " alt="">
+      <div class="content">
+        <h3>Modhu</h3>
+        <p>Natural Modhu</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
   </div>
 
-  <!-- ================= ORDER TRACKING ================= -->
+  <!-- ================= ORDER TRACKING ================= --
   <h2 style="margin-top:30px;">Order Tracking</h2>
   <div class="tracking">
     <button onclick="nextStep()">Update Status</button>
@@ -858,7 +964,7 @@ input, select, textarea {
     </div>
   </div>
 
-  <!-- ================= PAYMENT ================= -->
+  <!-- ================= PAYMENT ================= --
   <h2 style="margin-top:30px;">Payment Options</h2>
   <div class="payment">
     <select>
@@ -868,7 +974,7 @@ input, select, textarea {
     <button>Pay Now</button>
   </div>
 
-  <!-- ================= REVIEWS ================= -->
+  <!-- ================= REVIEWS ================= --
   <h2 style="margin-top:30px;">Review & Rating</h2>
   <div class="review-box">
     <div class="stars" id="stars">
@@ -882,14 +988,15 @@ input, select, textarea {
     <button>Submit Review</button>
   </div>
 
-  <!-- ================= PROMO ================= -->
+  <!-- ================= PROMO ================= --
   <h2 style="margin-top:30px;">Promotions</h2>
   <div class="promo">
     <h3>🎉 20% OFF for Loyal Customers!</h3>
     <p>Use code: LOYAL20</p>
   </div>
-
+-->
 </div>
+
 
 <script>
 /* =====================
@@ -914,6 +1021,8 @@ function rate(value) {
   });
 }
 </script>
+
+
                         </div>
                     </div>
 
@@ -934,11 +1043,11 @@ function rate(value) {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background: #9fbddb;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
@@ -1027,6 +1136,7 @@ button:hover {
   <div class="card">
     <h2>Chef Login / Registration</h2>
     <input type="email" placeholder="Email">
+    <input type="int" placeholder="Phone Number">
     <input type="password" placeholder="Password">
     <button>Login</button>
   </div>
@@ -1062,7 +1172,7 @@ button:hover {
     </div>
   </div>
 
-  <!-- ================= EARNINGS ================= -->
+  <!-- ================= EARNINGS ================= --->
   <div class="card">
     <h2>Earnings Dashboard</h2>
     <div class="dashboard">
@@ -1109,7 +1219,7 @@ function addMenu() {
 /* =======================
    ORDER & EARNINGS
 ======================= */
-let orders = 0;
+let order = 0;
 let earnings = 0;
 
 function completeOrder(amount) {
@@ -1120,10 +1230,36 @@ function completeOrder(amount) {
   document.getElementById("totalEarnings").innerText = earnings;
 }
 </script>
+
+
                         </div>
                     </div>
 
-                    <!-- Admin Tab -->
+
+
+
+
+
+  <!-- Key Features (Tabs) --
+        <section id="">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Admin Features</h2>
+                    <p>Admin.</p>
+                </div>
+
+                <div class="tabs-container">
+                    <div class="tabs-header">
+                       
+                    
+                        <button class="tab-btn" onclick="openTab(event, 'admin')">Admin Panel</button>
+                    
+                    </div>
+
+                -->
+
+
+                    <!-- Admin Tab -
                     <div id="admin" class="tab-content">
                         <h3 style="margin-bottom: 20px; text-align: center;">Admin Control</h3>
                         <div class="feature-list">
@@ -1233,7 +1369,7 @@ input, select {
 
 <div class="container">
 
-  <!-- ================= DASHBOARD ================= -->
+  <!-- ================= DASHBOARD ================= --
   <div class="card">
     <h2>Admin Dashboard</h2>
     <div class="dashboard">
@@ -1244,7 +1380,7 @@ input, select {
     </div>
   </div>
 
-  <!-- ================= USER MANAGEMENT ================= -->
+  <!-- ================= USER MANAGEMENT ================= --
   <div class="card">
     <h2>User Management</h2>
     <input id="userName" placeholder="User Name">
@@ -1267,7 +1403,7 @@ input, select {
     </table>
   </div>
 
-  <!-- ================= MENU MANAGEMENT ================= -->
+  <!-- ================= MENU MANAGEMENT ================= --
   <div class="card">
     <h2>Menu & Content Management</h2>
     <input id="menuItem" placeholder="Menu Item">
@@ -1275,21 +1411,21 @@ input, select {
     <ul id="menuList"></ul>
   </div>
 
-  <!-- ================= ORDER MANAGEMENT ================= -->
+  <!-- ================= ORDER MANAGEMENT ================= --
   <div class="card">
     <h2>Order & Delivery Management</h2>
     <button onclick="addOrder()">Create Order</button>
     <ul id="orderList"></ul>
   </div>
 
-  <!-- ================= FINANCIAL ================= -->
+  <!-- ================= FINANCIAL ================= --
   <div class="card">
     <h2>Financial Management</h2>
     <button onclick="addRevenue()">Add Sample Revenue</button>
     <p>Total Revenue: ৳<span id="financeTotal">0</span></p>
   </div>
 
-  <!-- ================= REPORTS ================= -->
+  <!-- ================= REPORTS ================= --
   <div class="card">
     <h2>Reports & Analytics</h2>
     <p>✔ Daily Orders Tracking</p>
@@ -1297,14 +1433,14 @@ input, select {
     <p>✔ User Growth</p>
   </div>
 
-  <!-- ================= SECURITY ================= -->
+  <!-- ================= SECURITY ================= --
   <div class="card">
     <h2>Security & Access Control</h2>
     <p>Current Role: <strong>Admin</strong></p>
     <p>✔ Role-based access enabled</p>
   </div>
 
-  <!-- ================= NOTIFICATIONS ================= -->
+  <!-- ================= NOTIFICATIONS ================= --
   <div class="card">
     <h2>Notifications & Communication</h2>
     <input id="notifyText" placeholder="Send notification">
@@ -1384,6 +1520,11 @@ function sendNotification() {
                 </div>
             </div>
         </section>
+    -->
+
+
+
+
 
         <!-- Benefits Section -->
         <section class="bg-light">
@@ -1588,6 +1729,7 @@ function sendNotification() {
                         <li><a href="#services">Services</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#tech">Technology</a></li>
+                       
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1603,8 +1745,9 @@ function sendNotification() {
                     <h5>Contact</h5>
                     <ul>
                         <li>Email: support@homemadeconnect.com</li>
-                        <li>Phone: +880+ 234 567 8900</li>
+                        <li>Phone: +880 234 567 8900</li>
                         <li>Location: [Your City Name]</li>
+                        <li>Location: [Your Country Name]</li>
                     </ul>
                 </div>
             </div>

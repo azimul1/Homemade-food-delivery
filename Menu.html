@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Menu Bar</title>
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f2937;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  color: #fbbf24;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ================= MENU SECTION ================= */
+.menu-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ================= MENU GRID ================= */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-item .content {
+  padding: 15px;
+}
+
+.menu-item h3 {
+  margin: 0;
+}
+
+.menu-item p {
+  color: #555;
+}
+
+.menu-item button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-item button:hover {
+  background: #1d4ed8;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #1f2937;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  
+  <div class="logo"> 🍲 Homemade</div>
+  
+  
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">Offers</a></li>
+    <li><a href="#">Cart</a></li>
+    <li><a href="#">Admin</a></li>
+  </ul>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  
+</nav>
+
+<!-- ================= MENU ================= -->
+<section class="menu-section">
+  <h2>Menu</h2>
+
+  <div class="menu-grid">
+
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+      <div class="content">
+        <h3>Burger</h3>
+        <p>Delicious beef burger</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+      <div class="content">
+        <h3>Pizza</h3>
+        <p>Cheesy pepperoni pizza</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2i44aRqGG0iDm8PIp5-PD3eXR_5iAhcjWCg&s">
+      <div class="content">
+        <h3>Kacchi</h3>
+        <p>Mutton Kacchi</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+
+    
+ <div class="menu-item">
+      <img src="https://i.ytimg.com/vi/AfpJFr0kbmk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLArjD0GQE__VIUnipRm8LbkSPP62g " alt="">
+      <div class="content">
+        <h3>Murgi</h3>
+        <p>Bhuna Murgi mangsho</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNLvRoMD-ztoTL3BQoHX2ZX72mL8wbXQ40-Q&s " alt="">
+      <div class="content">
+        <h3>khichuri</h3>
+        <p>Bhuna Khichuri</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+
+
+    <div class="menu-item">
+      <img src="https://kitchenofdebjani.com/wp-content/uploads/2022/08/Gurer-Narkel-Naru-Recipe-Debjanir-Rannaghar.jpg" alt="">
+      <div class="content">
+        <h3>Naru</h3>
+        <p>Narkel Naru</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkzKkCZXeHBhtKdb8XZM-n9in9ZZrQ_8gMg&s" alt="">
+      <div class="content">
+        <h3>Naru</h3>
+        <p>Tiler Naru</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src=" https://img.drz.lazcdn.com/g/kf/S3e11ba4caddd41bd92834c4d2b1beb20P.jpg_200x200q80.avif" alt="">
+      <div class="content">
+        <h3>papur</h3>
+        <p>melar papur</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+<div class="menu-item">
+      <img src=" https://thebellyrulesthemind.net/wp-content/uploads/2022/10/Instant-Pot-Ghee-04-pin.jpg " alt="">
+      <div class="content">
+        <h3>Ghee</h3>
+        <p>Pure Ghee</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+
+
+<title>Order Tracking UI</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: #f5f7fb;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  /* ================= ORDER TRACKING ================= */
+  .tracking {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .status {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .status::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ddd;
+    z-index: 0;
+  }
+
+  .step {
+    background: #ddd;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 1;
+    transition: 0.3s;
+  }
+
+  .step.active {
+    background: #4caf50;
+    color: #fff;
+  }
+
+  .tracking button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #4caf50;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* ================= PAYMENT ================= */
+  .payment {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  select, .payment button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    flex: 1;
+  }
+
+  .payment button {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ================= REVIEW ================= */
+  .review-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .stars span {
+    font-size: 28px;
+    cursor: pointer;
+    color: #ccc;
+  }
+
+  .stars span.active {
+    color: #ff9800;
+  }
+
+  textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+
+  .review-box button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #2196f3;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* ================= PROMO ================= */
+  .promo {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .promo h3 {
+    margin: 0;
+  }
+
+  .promo p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 600px) {
+    .status {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .status::before {
+      display: none;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ORDER TRACKING -->
+  <h2>Order Tracking</h2>
+  <div class="tracking">
+    <button onclick="nextStep()">Update Status</button>
+    <div class="status">
+      <div class="step active">Placed</div>
+      <div class="step">Cooking</div>
+      <div class="step">On the Way</div>
+      <div class="step">Delivered</div>
+    </div>
+  </div>
+
+  <!-- PAYMENT -->
+  <h2>Payment Options</h2>
+  <div class="payment">
+    <select>
+      <option>Cash on Delivery</option>
+      <option>Online Payment</option>
+    </select>
+    <button>Pay Now</button>
+  </div>
+
+  <!-- REVIEW -->
+  <h2>Review & Rating</h2>
+  <div class="review-box">
+    <div class="stars" id="stars">
+      <span onclick="rate(1)">★</span>
+      <span onclick="rate(2)">★</span>
+      <span onclick="rate(3)">★</span>
+      <span onclick="rate(4)">★</span>
+      <span onclick="rate(5)">★</span>
+    </div>
+    <textarea rows="4" placeholder="Write your review..."></textarea>
+    <button>Submit Review</button>
+  </div>
+
+  <!-- PROMO -->
+  <h2>Promotions</h2>
+  <div class="promo">
+    <h3>🎉 20% OFF for Loyal Customers!</h3>
+    <p>Use Code: <strong>LOYAL20</strong></p>
+  </div>
+
+</div>
+
+<script>
+  let currentStep = 0;
+  const steps = document.querySelectorAll(".step");
+
+  function nextStep() {
+    if (currentStep < steps.length) {
+      steps[currentStep].classList.add("active");
+      currentStep++;
+    }
+  }
+
+  function rate(stars) {
+    const starElements = document.querySelectorAll("#stars span");
+    starElements.forEach((star, index) => {
+      star.classList.toggle("active", index < stars);
+    });
+  }
+</script>
+
+
+</body>
+</html>

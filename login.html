@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Login</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f1f5f9;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 15px 20px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ===== AUTH BOX ===== */
+.auth-box {
+  background: #fff;
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.auth-box button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.primary-btn {
+  background: #667eea;
+  color: white;
+}
+
+.secondary-btn {
+  background: #e2e8f0;
+}
+
+.auth-footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.auth-footer a {
+  color: #667eea;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.error {
+  text-align: center;
+  font-size: 12px;
+  color: red;
+  margin-bottom: 5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .auth-box {
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+ 
+
+    <div class="auth-box">
+      <h2 id="formTitle">User Login</h2>
+
+      <div class="error" id="errorMsg"></div>
+
+      <input type="email" id="email" placeholder="Email">
+      <input type="tel" id="phone" placeholder="Phone Number">
+      <input type="password" id="password" placeholder="Password">
+
+      <div class="btn-group">
+        <button class="primary-btn" id="mainBtn">Login</button>
+        <button class="secondary-btn" id="resetBtn">Clear</button>
+      </div>
+
+      <div class="auth-footer">
+        <span id="toggleText">Don’t have an account?</span>
+        <a id="toggleLink">Register</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+let isLogin = true;
+
+const formTitle = document.getElementById("formTitle");
+const mainBtn = document.getElementById("mainBtn");
+const toggleLink = document.getElementById("toggleLink");
+const toggleText = document.getElementById("toggleText");
+const errorMsg = document.getElementById("errorMsg");
+
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const password = document.getElementById("password");
+const resetBtn = document.getElementById("resetBtn");
+
+toggleLink.addEventListener("click", () => {
+  isLogin = !isLogin;
+
+  formTitle.innerText = isLogin ? "User Login" : "User Registration";
+  mainBtn.innerText = isLogin ? "Login" : "Register";
+  toggleText.innerText = isLogin ? "Don’t have an account?" : "Already have an account?";
+  toggleLink.innerText = isLogin ? "Register" : "Login";
+  errorMsg.innerText = "";
+});
+
+mainBtn.addEventListener("click", () => {
+  errorMsg.innerText = "";
+
+  if (!email.value || !phone.value || !password.value) {
+    errorMsg.innerText = "⚠ Please fill all fields";
+    return;
+  }
+
+  if (password.value.length < 6) {
+    errorMsg.innerText = "⚠ Password must be at least 6 characters";
+    return;
+  }
+
+  alert(isLogin ? "✅ Login Successful" : "🎉 Registration Successful");
+});
+
+resetBtn.addEventListener("click", () => {
+  email.value = phone.value = password.value = "";
+  errorMsg.innerText = "";
+});
+</script>
+
+</body>
+</html>
